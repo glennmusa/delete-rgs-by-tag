@@ -17,12 +17,12 @@ As of this writing (20210304) there's no way to bulk delete resource groups from
 
 ### Assign Tags in the Azure Portal
 
-1. If you know your subscription ID, substitute `{YOUR_SUBSCRIPTION_ID}` in this URL and open it in a browser:
+1. If you know your tenant and subscription ID, substitute `{YOUR_TENANT_NAME}` and `{YOUR_SUBSCRIPTION_ID}` in this URL and open it in a browser:
 
     (If you don't, that's cool too, see [Finding resource groups in the Azure Portal](#Finding-resource-groups-in-the-Azure-Portal) for more guidance.)
 
     ```plaintext
-    https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/{YOUR_SUBSCRIPTION_ID/resourceGroups
+    https://portal.azure.com/#@{YOUR_TENANT_NAME}/resource/subscriptions/{YOUR_SUBSCRIPTION_ID/resourceGroups
     ```
 
 1. Select the resource groups to delete with the checkboxes left of their name and select `Assign Tags`:
