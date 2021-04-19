@@ -67,7 +67,7 @@ Don't want to approve every deletion?
 - Auto-approve deletion of every resource group matching the tag by passing 'y' as a second argument:
 
     ```shell
-    ./create_keyvault deleteme y
+    ./delete_rgs_by_tag.sh deleteme y
     ```
 
 Don't want to wait for all the resources in your resource group to be deleted?
@@ -75,7 +75,7 @@ Don't want to wait for all the resources in your resource group to be deleted?
 - Send the delete operations without waiting for results by passing 'n' as a third argument:
 
     ```shell
-    ./create_keyvault deleteme n n
+    ./delete_rgs_by_tag.sh deleteme n n
     ```
 
 All the paramters in this script:
