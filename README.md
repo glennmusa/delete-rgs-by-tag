@@ -39,7 +39,7 @@ If you're comfortable with xargs, you can pipe the output of `az group list` int
 
 ```bash
 az login
-az group list --tag "deleteme" --query [].name --output tsv | xargs -otl az group delete -name
+az group list --tag "deleteme" --query [].name --output tsv | xargs -otl az group delete --name 
 ```
 
 ### Execute the script
