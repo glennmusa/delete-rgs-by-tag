@@ -33,18 +33,21 @@ As of this writing (20210304) there's no way to bulk delete resource groups from
 
     ![Image of Tags dialog box with 'deleteme' in the input](docs/img/portal_assign_tags.png)
 
+### Use xargs
+
+If you're comfortable with xargs, you can pipe the output of `az group list` into it and delete the tagged items:
+
+```bash
+az login
+az group list --tag "deleteme" --query [].name --output tsv | xargs -otl az group delete -name
+```
+
 ### Execute the script
 
-1. From this repo, make the script executable with `chmod` and login to Azure CLI:
+1. Execute the script to delete all resource groups matching a tag name.
 
     ```shell
-    chmod u+x ./delete_rgs_by_tag.sh
     az login
-    ```
-
-1. Then, execute the script to delete all resource groups matching a tag name.
-
-    ```shell
     ./delete_rgs_by_tag.sh deleteme
     ```
 
